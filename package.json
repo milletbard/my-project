@@ -1,5 +1,4 @@
 {
-  "homepage": "http://milletbard.github.io/word-practice-in-vue",
   "name": "vue-proj",
   "version": "0.1.0",
   "private": true,
@@ -7,13 +6,13 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "node-sass": "^4.11.0",
     "vue": "^2.5.17"
   },
+  "homepage": "http://milletbard.github.io/word-practice-in-vue",
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.3",
     "@vue/cli-plugin-eslint": "^3.0.3",
