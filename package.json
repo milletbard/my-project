@@ -1,25 +1,22 @@
 {
+  "homepage": "http://milletbard.github.io/word-practice-in-vue",
   "name": "vue-proj",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "deploy": "node ./node_modules/vue-gh-pages/index.js",
-    "wst": "/dist/"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "node-sass": "^4.11.0",
     "vue": "^2.5.17"
   },
-  "homepage": "http://milletbard.github.io/word-practice-in-vue",
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.3",
     "@vue/cli-plugin-eslint": "^3.0.3",
     "@vue/cli-service": "^3.0.3",
     "gh-pages": "^2.0.1",
-    "vue-gh-pages": "^1.19.0",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {

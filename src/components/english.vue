@@ -44,7 +44,7 @@ export default {
       this.Total++;
       this.wrongOption = option;
       if (option.correct) {
-        this.status = "correct";
+        this.correct = "correct";
         this.grade++;
       } else {
         this.correct = "correct";
