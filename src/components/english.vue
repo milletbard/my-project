@@ -1,27 +1,31 @@
+
 <template>
   <div class="row">
-    <div class="col-sm-12">
+    <div class>
       <h3>Score: {{ grade }}</h3>
       <h3>Total: {{ Total }}</h3>
       <h2 class="animated fadeIn" v-if="question" :key="question.english">
         Q : {{ question.trans }}
         <div class="status">{{ status }}</div>
       </h2>
-      <ul class="animated fadeIn">
+      <ol class="animated fadeIn col-lg-12">
         <li
+          class="hvr-fade"
           v-bind:key="option.english"
-          v-bind:class="{correct: correct ==  'correct' && option.correct ,
-          wrong:wrong == 'wrong' && option.english ==wrongOption.english
+          v-bind:class="{ 
+            correct: correct ==  'correct' && option.correct ,
+            wrong:wrong == 'wrong' && option.english ==wrongOption.english
           }"
           v-for="option in options"
           v-on:click="check(option)"
         >{{option.english}}</li>
-      </ul>
+      </ol>
     </div>
   </div>
 </template>
 
 <script>
+import "hover.css";
 export default {
   name: "english",
   data() {
@@ -33,7 +37,8 @@ export default {
       Total: 0,
       wrongOption: {},
       correct: "",
-      wrong: ""
+      wrong: "",
+      hvr: "hvr-fade"
     };
   },
   mounted() {
@@ -69,8 +74,12 @@ export default {
         .slice()
         .sort((a, b) => Math.random() - 0.5)
         .slice(0, 4);
+      //==================
+
       let questionClone = JSON.parse(JSON.stringify(question));
+
       questionClone.correct = true;
+      console.log(questionClone);
       let result2 = result
         .concat([questionClone])
         .sort((a, b) => Math.random() - 0.5);
@@ -2097,7 +2106,7 @@ const rows4 = rows3.map(row => ({
 li {
   padding: 10px;
   margin-top: 20px;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   cursor: pointer;
   font-size: 30px;
 }
@@ -2110,5 +2119,15 @@ li {
 li:hover {
   background-color: rgba(white, 0.1);
   transition: 0.5s;
+}
+.hvr-bounce-to-right {
+  width: 100%;
+}
+.hvr-fade {
+  width: 100%;
+  list-style: upper-alpha;
+}
+.section {
+  width: 100%;
 }
 </style>

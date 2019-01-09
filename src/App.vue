@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container">
+  <div class="container-fluid">
     <english/>
   </div>
 </template>
@@ -29,22 +29,15 @@ body {
 body,
 html {
   margin: 0;
-  height: 100%;
-}
-#app {
-  width: 50%;
+  height: 100vh;
+  width: 100vw;
 }
 
 html,
 ul {
-  list-style: none;
   padding: 0px;
 }
 
-.row {
-  width: 80%;
-  margin: 0;
-}
 .status {
   float: right;
 }
